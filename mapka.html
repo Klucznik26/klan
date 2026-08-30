@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Mapka dojazdu do KLAN OBUWIE w Nakle nad Notecią przy ul. Dąbrowskiego 15.">
+  <title>Mapka dojazdu — KLAN OBUWIE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="mapa.css">
+</head>
+<body>
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <nav class="main-nav" aria-label="Główna nawigacja">
+        <a href="index.html#nowosci" data-i18n="navNews">Nowości</a>
+        <a href="porady.html" data-i18n="navTips">Porady</a>
+        <a href="index.html#kontakt" data-i18n="navContact">Kontakt</a>
+        <a href="mapka.html" class="active" aria-current="page" data-i18n="navMap">Mapka dojazdu</a>
+        <a href="index.html#firma" data-i18n="navAbout">O firmie</a>
+      </nav>
+
+      <nav class="language-switcher" aria-label="Wybór języka">
+        <button class="lang-button active" type="button" data-lang="pl" aria-pressed="true">PL</button>
+        <button class="lang-button" type="button" data-lang="uk" aria-pressed="false">UA</button>
+        <button class="lang-button" type="button" data-lang="en" aria-pressed="false">EN</button>
+      </nav>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="KLAN OBUWIE — strona główna">
+      <span class="brand-name">KLAN</span>
+      <span class="brand-subtitle">OBUWIE</span>
+    </a>
+  </header>
+
+  <main>
+    <section class="map-section" aria-labelledby="map-title">
+      <div class="map-copy">
+        <p class="eyebrow" data-i18n="mapEyebrow">Znajdź nas</p>
+        <h2 id="map-title" data-i18n="mapTitle">Mapka dojazdu</h2>
+        <p class="map-description" data-i18n="mapDescription">Sklep KLAN OBUWIE znajduje się w centrum Nakła nad Notecią przy ul. Dąbrowskiego 15.</p>
+        <address class="map-address">
+          <strong>KLAN OBUWIE</strong>
+          <span>Nakło nad Notecią</span>
+          <span>ul. Dąbrowskiego 15</span>
+        </address>
+        <a class="route-link" href="https://www.google.com/maps/dir/?api=1&amp;destination=D%C4%85browskiego+15%2C+Nak%C5%82o+nad+Noteci%C4%85" target="_blank" rel="noopener noreferrer" data-i18n="mapRoute">Wyznacz trasę</a>
+      </div>
+
+      <div class="map-frame-wrap">
+        <iframe
+          class="map-frame"
+          title="Mapa dojazdu do KLAN OBUWIE"
+          src="https://www.google.com/maps?q=D%C4%85browskiego%2015%2C%20Nak%C5%82o%20nad%20Noteci%C4%85&amp;output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© 2026 KLAN OBUWIE</span>
+    <span class="footer-separator" aria-hidden="true">•</span>
+    <span data-i18n="footerText">Sklep internetowy w przygotowaniu</span>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="mapa.js"></script>
+</body>
+</html>
