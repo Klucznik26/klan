@@ -69,17 +69,19 @@ img {
 }
 
 .language-switcher {
-  position: absolute;
-  top: 44px;
-  right: 0;
+  position: fixed;
+  top: 24px;
+  right: 28px;
+  z-index: 20;
   display: inline-flex;
   align-items: center;
   gap: 6px;
   padding: 6px;
   border: 1px solid var(--line);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.72);
   backdrop-filter: blur(8px);
+  box-shadow: 0 6px 20px rgba(32, 28, 20, 0.08);
 }
 
 .lang-button {
@@ -317,6 +319,7 @@ figcaption {
 
   .language-switcher {
     position: static;
+    box-shadow: none;
   }
 
   .hero {
