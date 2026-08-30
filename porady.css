@@ -26,37 +26,52 @@
   line-height: 1.8;
 }
 
-.advice-grid {
-  margin-top: clamp(60px, 8vw, 100px);
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
+.advice-carousel {
+  position: relative;
+  width: min(920px, 100%);
+  margin: clamp(60px, 8vw, 100px) auto 0;
+  padding: 0 86px 56px;
+  outline: none;
+}
+
+.carousel-viewport {
+  overflow: hidden;
+  box-shadow: 0 20px 55px rgba(32, 28, 20, 0.08);
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 420ms cubic-bezier(.22, .61, .36, 1);
+  will-change: transform;
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  min-width: 100%;
 }
 
 .advice-card {
   position: relative;
-  min-height: 310px;
-  padding: 34px 30px 32px;
+  min-height: 390px;
+  padding: 46px 48px 44px;
   border-top: 1px solid var(--gold);
   border-bottom: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.46);
+  background: rgba(255, 255, 255, 0.56);
 }
 
 .advice-card-clickable {
   padding: 0;
-  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+  transition: background 160ms ease;
 }
 
 .advice-card-clickable:hover {
-  transform: translateY(-3px);
-  background: rgba(255, 255, 255, 0.7);
-  box-shadow: 0 16px 40px rgba(32, 28, 20, 0.08);
+  background: rgba(255, 255, 255, 0.78);
 }
 
 .advice-card-link {
   display: block;
-  min-height: 310px;
-  padding: 34px 30px 32px;
+  min-height: 390px;
+  padding: 46px 48px 44px;
   color: inherit;
   text-decoration: none;
 }
@@ -71,21 +86,23 @@
 }
 
 .advice-card h2 {
+  max-width: 640px;
   margin: 0;
-  font-size: clamp(2rem, 3.1vw, 3rem);
-  line-height: 1.03;
+  font-size: clamp(2.4rem, 4.6vw, 4.2rem);
+  line-height: 1.02;
 }
 
 .advice-card p {
-  margin: 22px 0 0;
+  max-width: 650px;
+  margin: 24px 0 0;
   color: var(--muted);
-  font-size: 0.92rem;
-  line-height: 1.75;
+  font-size: 0.98rem;
+  line-height: 1.8;
 }
 
 .advice-read-more {
   display: inline-block;
-  margin-top: 26px;
+  margin-top: 30px;
   padding-bottom: 5px;
   border-bottom: 1px solid var(--gold);
   color: var(--ink);
@@ -93,6 +110,60 @@
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: calc(50% - 28px);
+  width: 52px;
+  height: 52px;
+  border: 1px solid var(--gold-soft);
+  border-radius: 50%;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.72);
+  font-size: 1.35rem;
+  cursor: pointer;
+  transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
+}
+
+.carousel-arrow:hover,
+.carousel-arrow:focus-visible {
+  transform: scale(1.06);
+  background: var(--white);
+  border-color: var(--gold);
+}
+
+.carousel-prev {
+  left: 10px;
+}
+
+.carousel-next {
+  right: 10px;
+}
+
+.carousel-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.carousel-dot {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  transition: transform 160ms ease, background 160ms ease;
+}
+
+.carousel-dot.active {
+  background: var(--gold);
+  transform: scale(1.18);
 }
 
 .back-home-wrap {
@@ -117,38 +188,48 @@
   color: var(--gold);
 }
 
-@media (max-width: 900px) {
-  .advice-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .advice-card,
-  .advice-card-link {
-    min-height: 0;
-  }
-
-  .advice-number {
-    margin-bottom: 30px;
-  }
-}
-
-@media (max-width: 600px) {
+@media (max-width: 760px) {
   .advice-main {
     width: min(100% - 28px, 1180px);
     margin-top: 18px;
   }
 
-  .advice-grid {
+  .advice-carousel {
     margin-top: 50px;
+    padding: 0 0 74px;
   }
 
   .advice-card,
   .advice-card-link {
-    padding: 28px 24px;
+    min-height: 360px;
+    padding: 34px 28px 32px;
   }
 
   .advice-card-clickable {
     padding: 0;
+  }
+
+  .advice-number {
+    margin-bottom: 34px;
+  }
+
+  .carousel-arrow {
+    top: auto;
+    bottom: 2px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .carousel-prev {
+    left: calc(50% - 92px);
+  }
+
+  .carousel-next {
+    right: calc(50% - 92px);
+  }
+
+  .carousel-dots {
+    bottom: 18px;
   }
 
   .back-home-wrap {
