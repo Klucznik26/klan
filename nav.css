@@ -46,9 +46,14 @@
 }
 
 .main-nav a:hover::after,
-.main-nav a:focus-visible::after {
+.main-nav a:focus-visible::after,
+.main-nav a.active::after {
   left: 0;
   right: 0;
+}
+
+.main-nav a.active {
+  color: var(--gold);
 }
 
 .top-bar .language-switcher {
