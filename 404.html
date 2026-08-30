@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>404 — KLAN OBUWIE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="404.css">
+</head>
+<body class="error-page">
+  <nav class="error-language" aria-label="Wybór języka">
+    <button class="error-lang active" type="button" data-lang="pl">PL</button>
+    <button class="error-lang" type="button" data-lang="uk">UA</button>
+    <button class="error-lang" type="button" data-lang="en">EN</button>
+  </nav>
+
+  <main class="error-main">
+    <a class="brand error-brand" href="index.html" aria-label="KLAN OBUWIE — strona główna">
+      <span class="brand-name">KLAN</span>
+      <span class="brand-subtitle">OBUWIE</span>
+    </a>
+
+    <div class="error-code" aria-hidden="true">404</div>
+    <p class="eyebrow" data-error-i18n="eyebrow">Nie znaleźliśmy tej strony</p>
+    <h1 data-error-i18n="title">Wygląda na to, że te buty poszły inną drogą.</h1>
+    <p class="error-copy" data-error-i18n="text">Adres mógł się zmienić albo strona jeszcze nie istnieje. Najprościej wrócić do KLAN OBUWIE i wybrać właściwy kierunek.</p>
+    <a class="error-back" href="index.html" data-error-i18n="back">Wróć do KLAN OBUWIE</a>
+  </main>
+
+  <script src="404.js"></script>
+</body>
+</html>
