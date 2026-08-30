@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Porady KLAN OBUWIE — dobór rozmiaru, pielęgnacja i przechowywanie obuwia.">
+  <title>Porady — KLAN OBUWIE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="porady.css">
+</head>
+<body data-page="advice">
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <nav class="main-nav" aria-label="Główna nawigacja">
+        <a href="index.html#nowosci" data-i18n="navNews">Nowości</a>
+        <a href="porady.html" class="active" aria-current="page" data-i18n="navTips">Porady</a>
+        <a href="index.html#kontakt" data-i18n="navContact">Kontakt</a>
+        <a href="index.html#mapa" data-i18n="navMap">Mapka dojazdu</a>
+        <a href="index.html#firma" data-i18n="navAbout">O firmie</a>
+      </nav>
+
+      <nav class="language-switcher" aria-label="Wybór języka">
+        <button class="lang-button active" type="button" data-lang="pl" aria-pressed="true">PL</button>
+        <button class="lang-button" type="button" data-lang="uk" aria-pressed="false">UA</button>
+        <button class="lang-button" type="button" data-lang="en" aria-pressed="false">EN</button>
+      </nav>
+    </div>
+  </div>
+
+  <header class="site-header advice-header">
+    <a class="brand" href="index.html" aria-label="KLAN OBUWIE — strona główna">
+      <span class="brand-name">KLAN</span>
+      <span class="brand-subtitle">OBUWIE</span>
+    </a>
+  </header>
+
+  <main class="advice-main">
+    <section class="advice-intro">
+      <p class="eyebrow" data-i18n="adviceEyebrow">KLAN OBUWIE radzi</p>
+      <h1 data-i18n="adviceTitle">Porady obuwnicze</h1>
+      <p class="advice-lead" data-i18n="adviceLead">Praktyczne wskazówki, które pomogą dobrze dobrać, pielęgnować i przechowywać obuwie.</p>
+    </section>
+
+    <section class="advice-grid" aria-label="Kategorie porad">
+      <article class="advice-card">
+        <span class="advice-number">01</span>
+        <h2 data-i18n="adviceCard1Title">Jak dobrać właściwy rozmiar?</h2>
+        <p data-i18n="adviceCard1Text">Wkrótce przygotujemy prosty poradnik mierzenia stopy i wyboru odpowiedniego rozmiaru.</p>
+      </article>
+
+      <article class="advice-card">
+        <span class="advice-number">02</span>
+        <h2 data-i18n="adviceCard2Title">Jak dbać o obuwie?</h2>
+        <p data-i18n="adviceCard2Text">Podpowiemy, jak czyścić i zabezpieczać różne materiały, aby buty służyły dłużej.</p>
+      </article>
+
+      <article class="advice-card">
+        <span class="advice-number">03</span>
+        <h2 data-i18n="adviceCard3Title">Jak przechowywać buty?</h2>
+        <p data-i18n="adviceCard3Text">Pokażemy, jak przechowywać obuwie między sezonami, aby zachowało swój kształt i wygląd.</p>
+      </article>
+    </section>
+
+    <div class="back-home-wrap">
+      <a class="back-home" href="index.html" data-i18n="backHome">Wróć na stronę główną</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <span>© 2026 KLAN OBUWIE</span>
+    <span class="footer-separator" aria-hidden="true">•</span>
+    <span data-i18n="footerText">Sklep internetowy w przygotowaniu</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
