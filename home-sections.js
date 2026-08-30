@@ -11,7 +11,9 @@
       offerSport: "Sportowe",
       offerSportText: "Wygodne obuwie do aktywnego dnia i swobodnych stylizacji.",
       offerAccessories: "Akcesoria",
-      offerAccessoriesText: "Dodatki i produkty pomocne w codziennym użytkowaniu obuwia."
+      offerAccessoriesText: "Dodatki i produkty pomocne w codziennym użytkowaniu obuwia.",
+      title: "Oferta — KLAN OBUWIE",
+      description: "Oferta KLAN OBUWIE — obuwie damskie, męskie, sportowe i akcesoria. Sklep stacjonarny w Nakle nad Notecią."
     },
     uk: {
       offerEyebrow: "Наша пропозиція",
@@ -24,7 +26,9 @@
       offerSport: "Спортивне",
       offerSportText: "Зручне взуття для активного дня та невимушених образів.",
       offerAccessories: "Аксесуари",
-      offerAccessoriesText: "Додатки та товари, корисні у щоденному користуванні взуттям."
+      offerAccessoriesText: "Додатки та товари, корисні у щоденному користуванні взуттям.",
+      title: "Пропозиція — KLAN OBUWIE",
+      description: "Пропозиція KLAN OBUWIE: жіноче, чоловіче та спортивне взуття й аксесуари в магазині в Накло-над-Нотецю."
     },
     en: {
       offerEyebrow: "Our offer",
@@ -37,9 +41,13 @@
       offerSport: "Sport",
       offerSportText: "Comfortable footwear for active days and casual looks.",
       offerAccessories: "Accessories",
-      offerAccessoriesText: "Accessories and products useful in everyday shoe care and use."
+      offerAccessoriesText: "Accessories and products useful in everyday shoe care and use.",
+      title: "Offer — KLAN OBUWIE",
+      description: "KLAN OBUWIE offer: women's, men's and sports footwear plus accessories at our store in Nakło nad Notecią."
     }
   };
+
+  const offerPage = document.body.dataset.page === "offer";
 
   const apply = (language) => {
     const selected = copy[language] ? language : "pl";
@@ -47,6 +55,12 @@
       const key = element.dataset.homeI18n;
       if (copy[selected][key]) element.textContent = copy[selected][key];
     });
+
+    if (offerPage) {
+      document.title = copy[selected].title;
+      const description = document.querySelector('meta[name="description"]');
+      if (description) description.setAttribute("content", copy[selected].description);
+    }
   };
 
   let language = "pl";
