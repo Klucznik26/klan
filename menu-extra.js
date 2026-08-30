@@ -1,13 +1,24 @@
 (() => {
   const ensureSiteIcons = () => {
-    let favicon = document.querySelector('link[rel~="icon"]');
+    const iconUrl = '/dama01.png?v=20260830-2';
+
+    let favicon = document.querySelector('link[rel="icon"]');
     if (!favicon) {
       favicon = document.createElement('link');
       favicon.rel = 'icon';
       document.head.appendChild(favicon);
     }
     favicon.type = 'image/png';
-    favicon.href = 'dama01.png';
+    favicon.href = iconUrl;
+
+    let shortcutIcon = document.querySelector('link[rel="shortcut icon"]');
+    if (!shortcutIcon) {
+      shortcutIcon = document.createElement('link');
+      shortcutIcon.rel = 'shortcut icon';
+      document.head.appendChild(shortcutIcon);
+    }
+    shortcutIcon.type = 'image/png';
+    shortcutIcon.href = iconUrl;
 
     let appleIcon = document.querySelector('link[rel="apple-touch-icon"]');
     if (!appleIcon) {
@@ -15,7 +26,7 @@
       appleIcon.rel = 'apple-touch-icon';
       document.head.appendChild(appleIcon);
     }
-    appleIcon.href = 'dama01.png';
+    appleIcon.href = iconUrl;
   };
 
   ensureSiteIcons();
