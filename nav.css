@@ -1,0 +1,115 @@
+.top-bar {
+  width: 100%;
+  border-bottom: 1px solid rgba(185, 148, 78, 0.22);
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(10px);
+}
+
+.top-bar-inner {
+  width: min(1320px, calc(100% - 40px));
+  min-height: 58px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+
+.main-nav {
+  grid-column: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(24px, 3.6vw, 54px);
+}
+
+.main-nav a {
+  position: relative;
+  padding: 20px 0 18px;
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  bottom: 12px;
+  height: 1px;
+  background: var(--gold);
+  transition: left 160ms ease, right 160ms ease;
+}
+
+.main-nav a:hover::after,
+.main-nav a:focus-visible::after {
+  left: 0;
+  right: 0;
+}
+
+.top-bar .language-switcher {
+  grid-column: 3;
+  justify-self: end;
+  position: static;
+  z-index: auto;
+  box-shadow: none;
+  background: rgba(255, 255, 255, 0.42);
+}
+
+@media (max-width: 900px) {
+  .top-bar-inner {
+    grid-template-columns: 1fr auto;
+    gap: 16px;
+    padding: 9px 0;
+  }
+
+  .main-nav {
+    grid-column: 1;
+    justify-content: flex-start;
+    gap: 24px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .main-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .main-nav a {
+    padding: 12px 0;
+  }
+
+  .top-bar .language-switcher {
+    grid-column: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .top-bar-inner {
+    width: min(100% - 24px, 1320px);
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .main-nav {
+    grid-column: 1;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 22px;
+    order: 2;
+  }
+
+  .top-bar .language-switcher {
+    grid-column: 1;
+    justify-self: end;
+    order: 1;
+  }
+
+  .site-header .language-switcher {
+    display: none;
+  }
+}
