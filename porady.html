@@ -51,10 +51,13 @@
 
       <div class="carousel-viewport">
         <div class="carousel-track">
-          <article class="advice-card carousel-slide" data-carousel-slide>
-            <span class="advice-number">01</span>
-            <h2 data-i18n="adviceCard1Title">Jak dobrać właściwy rozmiar?</h2>
-            <p data-i18n="adviceCard1Text">Wkrótce przygotujemy prosty poradnik mierzenia stopy i wyboru odpowiedniego rozmiaru.</p>
+          <article class="advice-card advice-card-clickable carousel-slide" data-carousel-slide>
+            <a class="advice-card-link" href="jak-dobrac-rozmiar.html" aria-label="Jak dobrać właściwy rozmiar?">
+              <span class="advice-number">01</span>
+              <h2 data-i18n="adviceCard1Title">Jak dobrać właściwy rozmiar?</h2>
+              <p data-i18n="adviceCard1Text">Dowiedz się, jak zmierzyć stopę, dobrać odpowiednią tęgość i porównać rozmiary EU, UK oraz US.</p>
+              <span class="advice-read-more" data-i18n="readArticle">Czytaj poradnik</span>
+            </a>
           </article>
 
           <article class="advice-card advice-card-clickable carousel-slide" data-carousel-slide>
@@ -95,6 +98,7 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="porady-rozmiar.js"></script>
   <script src="porady-carousel.js"></script>
 </body>
 </html>
