@@ -46,3 +46,7 @@ try {
   sizeGuideLanguage = localStorage.getItem("klanLanguage") || "pl";
 } catch (_) {}
 applySizeGuideLanguage(sizeGuideLanguage);
+
+const menuExtraScript = document.createElement("script");
+menuExtraScript.src = "menu-extra.js";
+document.body.appendChild(menuExtraScript);
