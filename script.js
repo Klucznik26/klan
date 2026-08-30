@@ -2,6 +2,10 @@ const translations = {
   pl: {
     pageTitle: "KLAN OBUWIE — sklep internetowy już wkrótce",
     description: "KLAN OBUWIE — sklep stacjonarny. Sklep internetowy już wkrótce.",
+    navNews: "Nowości",
+    navContact: "Kontakt",
+    navMap: "Mapka dojazdu",
+    navAbout: "O firmie",
     storeType: "Sklep stacjonarny",
     heroTitle: "Dobre buty.<br>Dobry krok.",
     lead: "Zapraszamy do KLAN OBUWIE. Nasz sklep internetowy jest właśnie w przygotowaniu.",
@@ -22,6 +26,10 @@ const translations = {
   uk: {
     pageTitle: "KLAN OBUWIE — інтернет-магазин незабаром",
     description: "KLAN OBUWIE — стаціонарний магазин. Інтернет-магазин незабаром.",
+    navNews: "Новинки",
+    navContact: "Контакти",
+    navMap: "Як дістатися",
+    navAbout: "Про компанію",
     storeType: "Стаціонарний магазин",
     heroTitle: "Гарне взуття.<br>Вдалий крок.",
     lead: "Ласкаво просимо до KLAN OBUWIE. Наш інтернет-магазин зараз готується до відкриття.",
@@ -42,6 +50,10 @@ const translations = {
   en: {
     pageTitle: "KLAN OBUWIE — online store coming soon",
     description: "KLAN OBUWIE — physical shoe store. Online store coming soon.",
+    navNews: "New arrivals",
+    navContact: "Contact",
+    navMap: "Directions",
+    navAbout: "About us",
     storeType: "Physical store",
     heroTitle: "Good shoes.<br>A good step.",
     lead: "Welcome to KLAN OBUWIE. Our online store is currently being prepared.",
