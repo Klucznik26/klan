@@ -9,6 +9,7 @@
   if (!nav) return;
 
   const home = /(^|\/)index\.html$/.test(location.pathname) || location.pathname.endsWith('/');
+  const offerPage = /(^|\/)oferta\.html$/.test(location.pathname);
   const news = nav.querySelector('a');
   if (!news) return;
 
@@ -18,17 +19,22 @@
   if (!offer) {
     offer = document.createElement('a');
     offer.dataset.extraNav = 'offer';
-    offer.href = home ? '#oferta' : 'index.html#oferta';
   }
+  offer.href = 'oferta.html';
 
   if (!trends) {
     trends = document.createElement('a');
     trends.dataset.extraNav = 'trends';
-    trends.href = home ? '#trendy' : 'index.html#trendy';
   }
+  trends.href = home ? '#trendy' : 'index.html#trendy';
 
   news.insertAdjacentElement('afterend', offer);
   offer.insertAdjacentElement('afterend', trends);
+
+  if (offerPage) {
+    offer.classList.add('active');
+    offer.setAttribute('aria-current', 'page');
+  }
 
   const apply = (language) => {
     const selected = labels[language] ? language : 'pl';
