@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="nav.css">
-  <link rel="stylesheet" href="mapa.css">
+  <link rel="stylesheet" href="hours.css">
 </head>
 <body>
   <div class="top-bar">
@@ -19,7 +19,7 @@
         <a href="#nowosci" data-i18n="navNews">Nowości</a>
         <a href="porady.html" data-i18n="navTips">Porady</a>
         <a href="#kontakt" data-i18n="navContact">Kontakt</a>
-        <a href="#mapa" data-i18n="navMap">Mapka dojazdu</a>
+        <a href="mapka.html" data-i18n="navMap">Mapka dojazdu</a>
         <a href="#firma" data-i18n="navAbout">O firmie</a>
       </nav>
 
@@ -64,8 +64,21 @@
         <div class="divider"></div>
         <div class="info-block">
           <span class="info-label" data-i18n="hoursLabel">Godziny otwarcia</span>
-          <strong data-i18n="hoursValue">Wkrótce uzupełnimy</strong>
-          <span class="info-note" data-i18n="hoursNote">Dane do potwierdzenia</span>
+
+          <div class="hours-schedule hours-pl" lang="pl">
+            <div class="hours-row"><strong>Pon.–Piąt.</strong><span>9:00–17:00</span></div>
+            <div class="hours-row"><strong>Sobota</strong><span>9:00–13:00</span></div>
+          </div>
+
+          <div class="hours-schedule hours-uk" lang="uk">
+            <div class="hours-row"><strong>Пн.–Пт.</strong><span>9:00–17:00</span></div>
+            <div class="hours-row"><strong>Субота</strong><span>9:00–13:00</span></div>
+          </div>
+
+          <div class="hours-schedule hours-en" lang="en">
+            <div class="hours-row"><strong>Mon.–Fri.</strong><span>9:00–17:00</span></div>
+            <div class="hours-row"><strong>Saturday</strong><span>9:00–13:00</span></div>
+          </div>
         </div>
         <div class="divider"></div>
         <div class="info-block">
@@ -74,31 +87,6 @@
           <span class="info-note" data-i18n="emailNote">Kontakt online pojawi się przed startem sklepu</span>
         </div>
       </aside>
-    </section>
-
-    <section class="map-section" id="mapa" aria-labelledby="map-title">
-      <div class="map-copy">
-        <p class="eyebrow" data-i18n="mapEyebrow">Znajdź nas</p>
-        <h2 id="map-title" data-i18n="mapTitle">Mapka dojazdu</h2>
-        <p class="map-description" data-i18n="mapDescription">Sklep KLAN OBUWIE znajduje się w centrum Nakła nad Notecią przy ul. Dąbrowskiego 15.</p>
-        <address class="map-address">
-          <strong>KLAN OBUWIE</strong>
-          <span>Nakło nad Notecią</span>
-          <span>ul. Dąbrowskiego 15</span>
-        </address>
-        <a class="route-link" href="https://www.google.com/maps/dir/?api=1&amp;destination=D%C4%85browskiego+15%2C+Nak%C5%82o+nad+Noteci%C4%85" target="_blank" rel="noopener noreferrer" data-i18n="mapRoute">Wyznacz trasę</a>
-      </div>
-
-      <div class="map-frame-wrap">
-        <iframe
-          class="map-frame"
-          title="Mapa dojazdu do KLAN OBUWIE"
-          src="https://www.google.com/maps?q=D%C4%85browskiego%2015%2C%20Nak%C5%82o%20nad%20Noteci%C4%85&amp;output=embed"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          allowfullscreen>
-        </iframe>
-      </div>
     </section>
 
     <section class="coming-soon" aria-label="Zapowiedź sklepu internetowego">
@@ -115,6 +103,5 @@
   </footer>
 
   <script src="script.js"></script>
-  <script src="mapa.js"></script>
 </body>
 </html>
