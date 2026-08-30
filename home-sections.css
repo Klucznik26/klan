@@ -1,0 +1,139 @@
+.offer-section {
+  width: min(1320px, calc(100% - 40px));
+  margin: clamp(90px, 11vw, 150px) auto 0;
+  scroll-margin-top: 90px;
+}
+
+.offer-heading {
+  max-width: 760px;
+  margin-bottom: 38px;
+}
+
+.offer-heading h2 {
+  margin: 0;
+  font-size: clamp(2.9rem, 5vw, 5rem);
+}
+
+.offer-heading > p:last-child {
+  max-width: 680px;
+  margin: 22px 0 0;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.offer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.offer-card {
+  position: relative;
+  min-height: 330px;
+  padding: 30px 28px 34px;
+  overflow: hidden;
+  border-right: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.34);
+}
+
+.offer-card:last-child {
+  border-right: 0;
+}
+
+.offer-index {
+  position: relative;
+  z-index: 2;
+  color: var(--gold);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+}
+
+.offer-letter {
+  position: absolute;
+  top: 14px;
+  right: 12px;
+  color: rgba(185, 148, 78, 0.09);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(8rem, 13vw, 12rem);
+  font-weight: 600;
+  line-height: 0.8;
+  pointer-events: none;
+}
+
+.offer-card h3 {
+  position: relative;
+  z-index: 2;
+  margin: 150px 0 12px;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  font-weight: 600;
+}
+
+.offer-card p {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.offer-card::after {
+  content: "";
+  position: absolute;
+  left: 28px;
+  right: 100%;
+  bottom: 0;
+  height: 2px;
+  background: var(--gold);
+  transition: right 180ms ease;
+}
+
+.offer-card:hover::after {
+  right: 28px;
+}
+
+@media (max-width: 1000px) {
+  .offer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .offer-card:nth-child(2) {
+    border-right: 0;
+  }
+
+  .offer-card:nth-child(-n + 2) {
+    border-bottom: 1px solid var(--line);
+  }
+}
+
+@media (max-width: 600px) {
+  .offer-section {
+    width: min(100% - 28px, 1320px);
+  }
+
+  .offer-heading {
+    text-align: center;
+  }
+
+  .offer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .offer-card,
+  .offer-card:nth-child(2) {
+    min-height: 250px;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .offer-card:last-child {
+    border-bottom: 0;
+  }
+
+  .offer-card h3 {
+    margin-top: 100px;
+  }
+}
