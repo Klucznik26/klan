@@ -16,56 +16,65 @@
       <span class="brand-name">KLAN</span>
       <span class="brand-subtitle">OBUWIE</span>
     </a>
+
+    <nav class="language-switcher" aria-label="Wybór języka">
+      <button class="lang-button active" type="button" data-lang="pl" aria-pressed="true">PL</button>
+      <button class="lang-button" type="button" data-lang="uk" aria-pressed="false">UA</button>
+      <button class="lang-button" type="button" data-lang="en" aria-pressed="false">EN</button>
+    </nav>
   </header>
 
   <main id="top">
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy hero-copy-left">
-        <p class="eyebrow">Sklep stacjonarny</p>
-        <h1 id="hero-title">Dobre buty.<br>Dobry krok.</h1>
-        <p class="lead">Zapraszamy do KLAN OBUWIE. Nasz sklep internetowy jest właśnie w przygotowaniu.</p>
-        <div class="launch-badge" aria-label="Sklep internetowy już wkrótce">
+        <p class="eyebrow" data-i18n="storeType">Sklep stacjonarny</p>
+        <h1 id="hero-title" data-i18n-html="heroTitle">Dobre buty.<br>Dobry krok.</h1>
+        <p class="lead" data-i18n="lead">Zapraszamy do KLAN OBUWIE. Nasz sklep internetowy jest właśnie w przygotowaniu.</p>
+        <div class="launch-badge">
           <span class="launch-dot" aria-hidden="true"></span>
-          Sklep online już wkrótce
+          <span data-i18n="launchBadge">Sklep online już wkrótce</span>
         </div>
       </div>
 
       <figure class="store-photo-wrap">
-        <img class="store-photo" src="klanbuty1.png" alt="Front sklepu obuwniczego KLAN OBUWIE" width="1108" height="1419">
+        <img class="store-photo" src="klanbuty1.png" alt="Front sklepu obuwniczego KLAN OBUWIE" width="1108" height="1419" data-i18n-alt="photoAlt">
         <figcaption>KLAN OBUWIE</figcaption>
       </figure>
 
       <aside class="info-card" aria-label="Informacje o sklepie">
         <div class="info-block">
-          <span class="info-label">Adres</span>
-          <strong>ul. Dąbrowskiego 15</strong>
+          <span class="info-label" data-i18n="addressLabel">Adres</span>
+          <strong class="address-city">Nakło nad Notecią</strong>
+          <strong class="address-street">ul. Dąbrowskiego 15</strong>
         </div>
         <div class="divider"></div>
         <div class="info-block">
-          <span class="info-label">Godziny otwarcia</span>
-          <strong>Wkrótce uzupełnimy</strong>
-          <span class="info-note">Dane do potwierdzenia</span>
+          <span class="info-label" data-i18n="hoursLabel">Godziny otwarcia</span>
+          <strong data-i18n="hoursValue">Wkrótce uzupełnimy</strong>
+          <span class="info-note" data-i18n="hoursNote">Dane do potwierdzenia</span>
         </div>
         <div class="divider"></div>
         <div class="info-block">
-          <span class="info-label">E-mail</span>
-          <strong>Wkrótce uzupełnimy</strong>
-          <span class="info-note">Kontakt online pojawi się przed startem sklepu</span>
+          <span class="info-label" data-i18n="emailLabel">E-mail</span>
+          <strong data-i18n="emailValue">Wkrótce uzupełnimy</strong>
+          <span class="info-note" data-i18n="emailNote">Kontakt online pojawi się przed startem sklepu</span>
         </div>
       </aside>
     </section>
 
     <section class="coming-soon" aria-label="Zapowiedź sklepu internetowego">
-      <p class="eyebrow">Nowy rozdział KLAN OBUWIE</p>
-      <h2>Wkrótce zakupy także przez internet</h2>
-      <p>Pracujemy nad uruchomieniem sklepu internetowego. Na tej stronie pojawi się pełna oferta, wygodne zamawianie oraz najważniejsze informacje o nowościach.</p>
+      <p class="eyebrow" data-i18n="comingEyebrow">Nowy rozdział KLAN OBUWIE</p>
+      <h2 data-i18n="comingTitle">Wkrótce zakupy także przez internet</h2>
+      <p data-i18n="comingText">Pracujemy nad uruchomieniem sklepu internetowego. Na tej stronie pojawi się pełna oferta, wygodne zamawianie oraz najważniejsze informacje o nowościach.</p>
     </section>
   </main>
 
   <footer class="site-footer">
     <span>© 2026 KLAN OBUWIE</span>
     <span class="footer-separator" aria-hidden="true">•</span>
-    <span>Sklep internetowy w przygotowaniu</span>
+    <span data-i18n="footerText">Sklep internetowy w przygotowaniu</span>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
