@@ -11,17 +11,28 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <nav class="main-nav" aria-label="Główna nawigacja">
+        <a href="#nowosci" data-i18n="navNews">Nowości</a>
+        <a href="#kontakt" data-i18n="navContact">Kontakt</a>
+        <a href="#mapa" data-i18n="navMap">Mapka dojazdu</a>
+        <a href="#firma" data-i18n="navAbout">O firmie</a>
+      </nav>
+
+      <nav class="language-switcher" aria-label="Wybór języka">
+        <button class="lang-button active" type="button" data-lang="pl" aria-pressed="true">PL</button>
+        <button class="lang-button" type="button" data-lang="uk" aria-pressed="false">UA</button>
+        <button class="lang-button" type="button" data-lang="en" aria-pressed="false">EN</button>
+      </nav>
+    </div>
+  </div>
+
   <header class="site-header">
     <a class="brand" href="#top" aria-label="KLAN OBUWIE — strona główna">
       <span class="brand-name">KLAN</span>
       <span class="brand-subtitle">OBUWIE</span>
     </a>
-
-    <nav class="language-switcher" aria-label="Wybór języka">
-      <button class="lang-button active" type="button" data-lang="pl" aria-pressed="true">PL</button>
-      <button class="lang-button" type="button" data-lang="uk" aria-pressed="false">UA</button>
-      <button class="lang-button" type="button" data-lang="en" aria-pressed="false">EN</button>
-    </nav>
   </header>
 
   <main id="top">
