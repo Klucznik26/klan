@@ -1,0 +1,36 @@
+.hours-schedule {
+  display: none;
+  margin-top: 2px;
+}
+
+html[lang="pl"] .hours-pl,
+html[lang="uk"] .hours-uk,
+html[lang="en"] .hours-en {
+  display: grid;
+  gap: 8px;
+}
+
+.hours-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 18px;
+}
+
+.hours-row strong {
+  font-size: clamp(1.2rem, 1.7vw, 1.55rem) !important;
+}
+
+.hours-row span {
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+@media (max-width: 760px) {
+  .hours-row {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+}
