@@ -29,10 +29,14 @@
   const nav = document.querySelector('.main-nav');
   if (!nav) return;
 
-  const home = /(^|\/)index\.html$/.test(location.pathname) || location.pathname.endsWith('/');
-  const offerPage = /(^|\/)oferta\.html$/.test(location.pathname);
-  const news = nav.querySelector('a');
+  const news = nav.querySelector('[data-i18n="navNews"]') || nav.querySelector('a');
+  const contact = nav.querySelector('[data-i18n="navContact"]');
+  const about = nav.querySelector('[data-i18n="navAbout"]');
   if (!news) return;
+
+  news.href = 'nowosci.html';
+  if (contact) contact.href = 'kontakt.html';
+  if (about) about.href = 'o-firmie.html';
 
   let offer = nav.querySelector('[data-extra-nav="offer"]');
   let trends = nav.querySelector('[data-extra-nav="trends"]');
@@ -47,14 +51,24 @@
     trends = document.createElement('a');
     trends.dataset.extraNav = 'trends';
   }
-  trends.href = home ? '#trendy' : 'index.html#trendy';
+  trends.href = 'trendy.html';
 
   news.insertAdjacentElement('afterend', offer);
   offer.insertAdjacentElement('afterend', trends);
 
-  if (offerPage) {
-    offer.classList.add('active');
-    offer.setAttribute('aria-current', 'page');
+  const currentPage = location.pathname.split('/').pop() || 'index.html';
+  const activeLinks = {
+    'nowosci.html': news,
+    'oferta.html': offer,
+    'trendy.html': trends,
+    'kontakt.html': contact,
+    'o-firmie.html': about
+  };
+
+  const active = activeLinks[currentPage];
+  if (active) {
+    active.classList.add('active');
+    active.setAttribute('aria-current', 'page');
   }
 
   const apply = (language) => {
