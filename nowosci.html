@@ -40,33 +40,61 @@
   </header>
 
   <main class="section-page-main">
-    <section class="section-page-shell">
+    <section class="section-page-shell news-page-shell">
       <p class="eyebrow" data-section-i18n="eyebrow">Nowe modele</p>
       <h1 data-section-i18n="heading">Nowości</h1>
       <p class="section-page-lead" data-section-i18n="lead">Przygotowujemy miejsce, w którym będziemy regularnie prezentować najnowsze modele dostępne w KLAN OBUWIE.</p>
       <p class="section-page-note" data-section-i18n="note">Docelowo znajdą się tutaj dwie niezależne karuzele — z nowościami damskimi i męskimi.</p>
 
-      <div class="section-preview-grid">
-        <article class="section-preview-card">
+      <div class="section-preview-grid news-category-grid">
+        <article class="section-preview-card news-category-card">
           <span class="section-preview-index">01</span>
           <span class="section-preview-letter" aria-hidden="true">D</span>
           <h2 data-section-i18n="card1Title">Nowości damskie</h2>
           <p data-section-i18n="card1Text">Nowe modele, kolory i propozycje dla kobiet.</p>
+
+          <div class="news-carousel" data-news-carousel tabindex="0" aria-label="Karuzela nowości damskich">
+            <div class="news-carousel-viewport">
+              <div class="news-carousel-track">
+                <div class="news-carousel-slide news-carousel-empty" data-news-slide>
+                  <span class="news-carousel-empty-letter" aria-hidden="true">D</span>
+                  <span class="news-carousel-empty-text" data-section-i18n="status">Sekcja w przygotowaniu</span>
+                </div>
+              </div>
+            </div>
+            <div class="news-carousel-controls">
+              <button class="news-carousel-arrow news-carousel-prev" type="button" aria-label="Poprzedni model">‹</button>
+              <div class="news-carousel-dots" aria-label="Wybór slajdu"></div>
+              <button class="news-carousel-arrow news-carousel-next" type="button" aria-label="Następny model">›</button>
+            </div>
+          </div>
         </article>
 
-        <article class="section-preview-card section-preview-card-product">
+        <article class="section-preview-card news-category-card">
           <span class="section-preview-index">02</span>
           <span class="section-preview-letter" aria-hidden="true">M</span>
           <h2 data-section-i18n="card2Title">Nowości męskie</h2>
           <p data-section-i18n="card2Text">Najnowsze modele i propozycje dla mężczyzn.</p>
 
-          <figure class="news-product-preview">
-            <img src="Inblu001.jpg" alt="Nowość męska KLAN OBUWIE" loading="lazy" decoding="async">
-          </figure>
+          <div class="news-carousel" data-news-carousel tabindex="0" aria-label="Karuzela nowości męskich">
+            <div class="news-carousel-viewport">
+              <div class="news-carousel-track">
+                <div class="news-carousel-slide" data-news-slide>
+                  <figure class="news-product-preview">
+                    <img src="Inblu001.jpg" alt="Nowość męska KLAN OBUWIE" loading="lazy" decoding="async">
+                  </figure>
+                </div>
+              </div>
+            </div>
+            <div class="news-carousel-controls">
+              <button class="news-carousel-arrow news-carousel-prev" type="button" aria-label="Poprzedni model">‹</button>
+              <div class="news-carousel-dots" aria-label="Wybór slajdu"></div>
+              <button class="news-carousel-arrow news-carousel-next" type="button" aria-label="Następny model">›</button>
+            </div>
+          </div>
         </article>
       </div>
 
-      <div class="section-status" data-section-i18n="status">Sekcja w przygotowaniu</div>
       <a class="section-back" href="index.html" data-section-i18n="back">Wróć na stronę główną</a>
     </section>
   </main>
@@ -80,5 +108,6 @@
   <script src="script.js"></script>
   <script src="menu-extra.js"></script>
   <script src="sekcja.js"></script>
+  <script src="nowosci-carousel.js"></script>
 </body>
 </html>
